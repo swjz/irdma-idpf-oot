@@ -101,7 +101,12 @@ if ${BUILD_LIBFABRIC}; then
 	    --enable-tcp=yes \
 	    --enable-verbs=yes \
 	    --enable-psm3=dl \
-	    --with-psm3-rv=yes
+	    --with-psm3-rv=yes \
+		--disable-efa \
+		--disable-mrail \
+		--disable-xpmem \
+		--disable-opx \
+		--disable-usnic
 	make -j"$(nproc)"
 	sudo make install
 	popd
