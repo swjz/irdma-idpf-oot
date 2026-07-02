@@ -52,7 +52,7 @@
 
 set -e
 
-LIBFABRIC_VERSION=88bfd44
+LIBFABRIC_VERSION=v2.5.0
 IEFS_KERNEL_UPDATES_VERSION=c9be17c
 
 BUILD_LIBFABRIC=true
@@ -100,7 +100,7 @@ if ${BUILD_LIBFABRIC}; then
 	    --enable-udp=yes \
 	    --enable-tcp=yes \
 	    --enable-verbs=yes \
-	    --enable-psm3=dl \
+	    --enable-psm3=yes \
 	    --with-psm3-rv=yes \
 		--disable-efa \
 		--disable-mrail \
